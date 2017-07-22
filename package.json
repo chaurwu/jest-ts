@@ -1,0 +1,23 @@
+{
+  "name": "jest-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
+    "pretest": "npm run lint",
+    "test": "jest"
+  },
+  "author": "Chaur Wu <wu.chaur@gmail.com> (http://www.essentier.com/)",
+  "license": "ISC",
+  "jest": {
+    "moduleFileExtensions": ["ts","tsx","js"],
+    "transform": {".*(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"},
+    "testMatch": ["**/src/*.spec.(ts|tsx|js)"]
+  },
+  "devDependencies": {
+    "jest": "^20.0.4",
+    "ts-jest": "^20.0.7",
+    "typescript": "^2.4.2"
+  }
+}
